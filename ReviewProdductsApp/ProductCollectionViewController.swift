@@ -1,3 +1,4 @@
+
 //
 //  ProductCollectionViewController.swift
 //  ReviewProdductsApp
@@ -9,7 +10,6 @@ import os.log
 import UIKit
 
 class ProductCollectionViewController: UICollectionViewController {
-
     
     @IBOutlet var collection: UICollectionView!
     
@@ -26,19 +26,18 @@ class ProductCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 5
         layout.itemSize = CGSize(width: (self.collection.frame.size.width - 20)/2, height: self.collection.frame.size.height/3)
         
-        
         loadSampleProducts()
     }
    
     func loadSampleProducts() {
-        let photo1 = UIImage(named: "meal1")!
-        let meal1 = Product(photo: photo1, productName: "test", detailProduct: "te", price: "100")!
+        let photo1 = UIImage(named: "image1")!
+        let meal1 = Product(photo: photo1, productName: "Mouse", detailProduct: "Black", price: "150")!
         
-        let photo2 = UIImage(named: "meal1")!
-        let meal2 = Product(photo: photo2, productName: "test", detailProduct: "detailTest", price: "100")!
+        let photo2 = UIImage(named: "image1")!
+        let meal2 = Product(photo: photo2, productName: "Mouse", detailProduct: "Black", price: "100")!
         
-        let photo3 = UIImage(named: "meal1")!
-        let meal3 = Product(photo: photo3, productName: "test", detailProduct: "detailTest", price: "100")!
+        let photo3 = UIImage(named: "image3")!
+        let meal3 = Product(photo: photo3, productName: "Computer", detailProduct: "Red", price: "150")!
         
         productList += [meal1, meal2, meal3]
     }
@@ -54,19 +53,19 @@ class ProductCollectionViewController: UICollectionViewController {
         switch(segue.identifier ?? "") {
             
         case "AddItem":
-            os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+            os_log("Add Products.", log: OSLog.default, type: .debug)
             
         case "ShowDetail":
             guard let productDetailViewController = segue.destination as? ViewController else {
-                fatalError("Unexpected destination)")
+                fatalError("Error destination)")
             }
             
             guard let selectedProductCell = sender as? ProductCollectionViewCell else {
-                fatalError("Unexpected sender")
+                fatalError("Error sender")
             }
             
             guard let indexPath = collectionView?.indexPath(for: selectedProductCell) else {
-                fatalError("The selected cell is not being displayed by the table")
+                fatalError("Error selected cell ")
             }
             
             let selectedProducts = productList[indexPath.row]
@@ -110,16 +109,14 @@ class ProductCollectionViewController: UICollectionViewController {
         }
     }
 
-    @IBAction func unwindToMealList(_ sender: UIStoryboardSegue) {
+    @IBAction func unwindToProductList(_ sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? ViewController, let product = sourceViewController.products {
             
-                // Add a new meal.
+                // Add new Product
                 let newIndexPath = IndexPath(row: productList.count, section: 0)
                 productList.append(product)
                 collectionView?.insertItems(at: [newIndexPath])
         }
     }
     
-    
-
 }

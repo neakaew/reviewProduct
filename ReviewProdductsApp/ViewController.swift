@@ -19,16 +19,20 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var nameDetailTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     
+    @IBOutlet weak var detialShowPhoto: UIImageView!
+    @IBOutlet weak var detialNameProduct: UITextField!
+    @IBOutlet weak var detailNamedetailTextView: UITextView!
+    @IBOutlet weak var detailPrice: UITextField!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-       // nameProductTextField?.delegate = self
 
-       if let productes = products {
-            showPhoto.image = productes.photo
-            nameProductTextField.text = productes.productName
-            nameDetailTextView.text = productes.detailProduct
-            namePriceTextField.text = productes.price
+        if let detailProducts = products {
+            detialShowPhoto.image = detailProducts.photo
+            detialNameProduct.text = detailProducts.productName
+            detailNamedetailTextView.text = detailProducts.detailProduct
+            detailPrice.text = detailProducts.price
         }
     }
     
@@ -56,7 +60,6 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
     }
 
 
-    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
          dismiss(animated: true, completion: nil)
         
@@ -76,4 +79,10 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
         }
     }
 
+    @IBAction func cancelReview(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func cancelAddReview(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }
