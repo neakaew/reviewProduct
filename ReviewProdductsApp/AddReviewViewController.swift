@@ -1,17 +1,11 @@
-//
-//  AddReviewViewController.swift
-//  ReviewProdductsApp
-//
-//  Created by udom on 2/7/61.
-//  Copyright © พ.ศ. 2561 ReviewProducts. All rights reserved.
-//
+
 import os.log
 import UIKit
 
 class AddReviewViewController: UIViewController {
 
     var reviewProducts: ReviewProduct?
-      var products: Product?
+    var products: Product?
     
     @IBOutlet weak var detailTextViewInAddReview: UITextView!
     @IBOutlet weak var ShowImageAddReview: UIImageView!
@@ -22,20 +16,15 @@ class AddReviewViewController: UIViewController {
     @IBOutlet weak var buttonGreen: UIButton!
     @IBOutlet weak var buttonYellow: UIButton!
     @IBOutlet weak var buttonRed: UIButton!
-    
-
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        commentTextView.delegate = self as?  UITextViewDelegate
-        commentTextView.text = "ข้อความ..."
-        commentTextView.textColor = UIColor.lightGray
         
-        detailTextViewInAddReview.delegate = self as? UITextViewDelegate
-        detailTextViewInAddReview.text = "รายละเอียดสินค้า..."
-        detailTextViewInAddReview.textColor = UIColor.lightGray
-    
+        if let product = products {
+            ShowImageAddReview.image = product.photo
+            nameProductAddReview.text = product.productName
+            detailTextViewInAddReview.text = product.detailProduct
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,11 +40,20 @@ class AddReviewViewController: UIViewController {
             reviewProducts = ReviewProduct(productNameInTableView: commentReview, detailProductInTableView: nameReview)
             
         }
-        }
-        
-    }
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+      }
     }
     
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        let isPresentingInAddProductMode = presentingViewController is UINavigationController
+        if isPresentingInAddProductMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("Error Cancel")
+        }
+    }
 }

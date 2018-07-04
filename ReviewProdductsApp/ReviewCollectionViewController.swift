@@ -14,10 +14,13 @@ class ReviewCollectionViewController: UICollectionViewController {
 
     var reviewProduct = [ReviewProduct]()
     var productList = [Product]()
+  var products: Product?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleReview()
+
 
     }
     private func loadSampleReview() {
@@ -64,37 +67,27 @@ class ReviewCollectionViewController: UICollectionViewController {
             collectionView?.insertItems(at: [newIndexPath])
         }
     }
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil
-        )
+    
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        let isPresentingInAddProductMode = presentingViewController is UINavigationController
+        if isPresentingInAddProductMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("Error Cancel")
+        }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//
-//        switch(segue.identifier ?? "") {
-//
-//        case "ShowDetail":
-//            guard let productDetailViewController = segue.destination as? ViewController else {
-//                fatalError("Error destination)")
-//            }
-//
-//            guard let selectedProductCell = sender as? ProductCollectionViewCell else {
-//                fatalError("Error sender")
-//            }
-//
-//            guard let indexPath = collectionView?.indexPath(for: selectedProductCell) else {
-//                fatalError("Error selected cell ")
-//            }
-//
-//            let selectedProducts = productList[indexPath.row]
-//            productDetailViewController.products = selectedProducts
-//
-//        default:
-//            fatalError("Unexpected Segue Identifier")
-//        }
-//
-//    }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        let AddReviewViewController = segue.destination as? AddReviewViewController
+        AddReviewViewController?.products = self.products
+            
+     
+    }
     
 }

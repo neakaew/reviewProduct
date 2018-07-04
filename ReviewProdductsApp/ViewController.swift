@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  ReviewProdductsApp
-//
-//  Created by udom on 1/7/61.
-//  Copyright © พ.ศ. 2561 ReviewProducts. All rights reserved.
-//
+
 import os.log
 import UIKit
 
@@ -12,30 +6,32 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
     
     var products: Product?
     
-    
     @IBOutlet weak var showPhoto: UIImageView!
     @IBOutlet weak var nameProductTextField: UITextField!
     @IBOutlet weak var namePriceTextField: UITextField!
     @IBOutlet weak var nameDetailTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     
-    @IBOutlet weak var detialShowPhoto: UIImageView!
-    @IBOutlet weak var detialNameProduct: UITextField!
-    @IBOutlet weak var detailNamedetailTextView: UITextView!
-    @IBOutlet weak var detailPrice: UITextField!
-    
+
+    var indexpathProduct:IndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard(_:)))
+        view.addGestureRecognizer(tapGesture)
+        
         if let detailProducts = products {
-            detialShowPhoto.image = detailProducts.photo
-            detialNameProduct.text = detailProducts.productName
-            detailNamedetailTextView.text = detailProducts.detailProduct
-            detailPrice.text = detailProducts.price
+            showPhoto.image = detailProducts.photo
+            nameProductTextField.text = detailProducts.productName
+            nameDetailTextView.text = detailProducts.detailProduct
+            namePriceTextField.text = detailProducts.price
         }
+
     }
     
+    @objc private func dismissKeyboard(_ sender: Any){
+        view.endEditing(true)
+    }
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         let imagePickerController = UIImagePickerController()
@@ -59,15 +55,24 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
         
     }
 
-
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-         dismiss(animated: true, completion: nil)
-        
+        let isPresentingInAddProductMode = presentingViewController is UINavigationController
+        if isPresentingInAddProductMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("Error Cancel")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let s = sender as? UIButton {
-            if saveButton === s {
+        guard let button = sender as? UIBarButtonItem, button === saveButton  else {
+            os_log("The save button was not pressed, cancelling", log:  OSLog.default, type: .debug)
+            return
+        }
                 
                 let photoes = showPhoto.image
                 let productName = nameProductTextField.text ?? ""
@@ -75,14 +80,9 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
                 let price = namePriceTextField.text ?? ""
                 
                 products = Product(photo: photoes, productName: productName, detailProduct: detailProduct, price: price)
-            }
+            
         }
-    }
 
-    @IBAction func cancelReview(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func cancelAddReview(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
+    
+    
 }
