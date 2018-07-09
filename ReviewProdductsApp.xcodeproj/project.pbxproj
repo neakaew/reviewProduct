@@ -15,13 +15,14 @@
 		4AC80F5020E8A682004752B2 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC80F4F20E8A682004752B2 /* ProductCollectionViewCell.swift */; };
 		4AC80F5220E8A6E6004752B2 /* ProductCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC80F5120E8A6E6004752B2 /* ProductCollectionViewController.swift */; };
 		4AC80F5420E8A99B004752B2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC80F5320E8A99B004752B2 /* Product.swift */; };
-		4AEADB0520EA081C004C8BDC /* ReviewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEADB0420EA081C004C8BDC /* ReviewProduct.swift */; };
 		4AEADB0720EA11E5004C8BDC /* ReviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEADB0620EA11E5004C8BDC /* ReviewCollectionViewController.swift */; };
 		4AEADB0920EA1219004C8BDC /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEADB0820EA1219004C8BDC /* ReviewCollectionViewCell.swift */; };
 		4AEADB0B20EA15E9004C8BDC /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEADB0A20EA15E9004C8BDC /* AddReviewViewController.swift */; };
 		4AEFE81C20EC6DBD00B4F409 /* DetailProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFE81B20EC6DBD00B4F409 /* DetailProductsViewController.swift */; };
-		4AEFE81E20ECC1BB00B4F409 /* aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFE81D20ECC1BB00B4F409 /* aViewController.swift */; };
-		4AEFE82020ECC1C500B4F409 /* bViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFE81F20ECC1C500B4F409 /* bViewController.swift */; };
+		4AFAE1E620EF1537001A5DEB /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE1E520EF1537001A5DEB /* RatingControl.swift */; };
+		4AFAE1E920EF7370001A5DEB /* SukhumvitSet.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 4AFAE1E820EF736F001A5DEB /* SukhumvitSet.ttc */; };
+		4AFAE1EB20EF86BA001A5DEB /* Gotham Bold Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AFAE1EA20EF86B9001A5DEB /* Gotham Bold Regular.ttf */; };
+		FE9B684627F6F1FFD94527E6 /* Pods_ReviewProdductsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943224A21923DC9DDE1CCCE5 /* Pods_ReviewProdductsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +36,16 @@
 		4AC80F4F20E8A682004752B2 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AC80F5120E8A6E6004752B2 /* ProductCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewController.swift; sourceTree = "<group>"; };
 		4AC80F5320E8A99B004752B2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		4AEADB0420EA081C004C8BDC /* ReviewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewProduct.swift; sourceTree = "<group>"; };
 		4AEADB0620EA11E5004C8BDC /* ReviewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewController.swift; sourceTree = "<group>"; };
 		4AEADB0820EA1219004C8BDC /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AEADB0A20EA15E9004C8BDC /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		4AEFE81B20EC6DBD00B4F409 /* DetailProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductsViewController.swift; sourceTree = "<group>"; };
-		4AEFE81D20ECC1BB00B4F409 /* aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aViewController.swift; sourceTree = "<group>"; };
-		4AEFE81F20ECC1C500B4F409 /* bViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bViewController.swift; sourceTree = "<group>"; };
+		4AFAE1E520EF1537001A5DEB /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		4AFAE1E820EF736F001A5DEB /* SukhumvitSet.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SukhumvitSet.ttc; sourceTree = "<group>"; };
+		4AFAE1EA20EF86B9001A5DEB /* Gotham Bold Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Bold Regular.ttf"; sourceTree = "<group>"; };
+		516D095C21CE2634AB805E25 /* Pods-ReviewProdductsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewProdductsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewProdductsApp/Pods-ReviewProdductsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6BCF934039B3FCB76A35C086 /* Pods-ReviewProdductsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewProdductsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewProdductsApp/Pods-ReviewProdductsApp.release.xcconfig"; sourceTree = "<group>"; };
+		943224A21923DC9DDE1CCCE5 /* Pods_ReviewProdductsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewProdductsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9B684627F6F1FFD94527E6 /* Pods_ReviewProdductsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 			children = (
 				4AC80F3C20E8A256004752B2 /* ReviewProdductsApp */,
 				4AC80F3B20E8A256004752B2 /* Products */,
+				DF7C8F0AF3D7BC1D9A75F7DC /* Pods */,
+				A0DA723885AB9F015C61D61C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +81,8 @@
 		4AC80F3C20E8A256004752B2 /* ReviewProdductsApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AFAE1E820EF736F001A5DEB /* SukhumvitSet.ttc */,
+				4AFAE1EA20EF86B9001A5DEB /* Gotham Bold Regular.ttf */,
 				4AC80F3D20E8A256004752B2 /* AppDelegate.swift */,
 				4AC80F3F20E8A256004752B2 /* ViewController.swift */,
 				4AC80F4120E8A256004752B2 /* Main.storyboard */,
@@ -81,17 +90,32 @@
 				4AC80F4620E8A258004752B2 /* LaunchScreen.storyboard */,
 				4AC80F4920E8A258004752B2 /* Info.plist */,
 				4AC80F4F20E8A682004752B2 /* ProductCollectionViewCell.swift */,
-				4AC80F5120E8A6E6004752B2 /* ProductCollectionViewController.swift */,
 				4AC80F5320E8A99B004752B2 /* Product.swift */,
-				4AEADB0420EA081C004C8BDC /* ReviewProduct.swift */,
+				4AC80F5120E8A6E6004752B2 /* ProductCollectionViewController.swift */,
 				4AEADB0620EA11E5004C8BDC /* ReviewCollectionViewController.swift */,
 				4AEADB0820EA1219004C8BDC /* ReviewCollectionViewCell.swift */,
 				4AEADB0A20EA15E9004C8BDC /* AddReviewViewController.swift */,
 				4AEFE81B20EC6DBD00B4F409 /* DetailProductsViewController.swift */,
-				4AEFE81D20ECC1BB00B4F409 /* aViewController.swift */,
-				4AEFE81F20ECC1C500B4F409 /* bViewController.swift */,
+				4AFAE1E520EF1537001A5DEB /* RatingControl.swift */,
 			);
 			path = ReviewProdductsApp;
+			sourceTree = "<group>";
+		};
+		A0DA723885AB9F015C61D61C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				943224A21923DC9DDE1CCCE5 /* Pods_ReviewProdductsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF7C8F0AF3D7BC1D9A75F7DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				516D095C21CE2634AB805E25 /* Pods-ReviewProdductsApp.debug.xcconfig */,
+				6BCF934039B3FCB76A35C086 /* Pods-ReviewProdductsApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AC80F4C20E8A258004752B2 /* Build configuration list for PBXNativeTarget "ReviewProdductsApp" */;
 			buildPhases = (
+				9306DBFCFE10FBA8B938F524 /* [CP] Check Pods Manifest.lock */,
 				4AC80F3620E8A256004752B2 /* Sources */,
 				4AC80F3720E8A256004752B2 /* Frameworks */,
 				4AC80F3820E8A256004752B2 /* Resources */,
+				786D0A1631930A4A6D18C767 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC80F4820E8A258004752B2 /* LaunchScreen.storyboard in Resources */,
+				4AFAE1EB20EF86BA001A5DEB /* Gotham Bold Regular.ttf in Resources */,
+				4AFAE1E920EF7370001A5DEB /* SukhumvitSet.ttc in Resources */,
 				4AC80F4520E8A258004752B2 /* Assets.xcassets in Resources */,
 				4AC80F4320E8A256004752B2 /* Main.storyboard in Resources */,
 			);
@@ -160,20 +188,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		786D0A1631930A4A6D18C767 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReviewProdductsApp/Pods-ReviewProdductsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewProdductsApp/Pods-ReviewProdductsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9306DBFCFE10FBA8B938F524 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReviewProdductsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AC80F3620E8A256004752B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4AC80F5220E8A6E6004752B2 /* ProductCollectionViewController.swift in Sources */,
-				4AEFE82020ECC1C500B4F409 /* bViewController.swift in Sources */,
-				4AEADB0520EA081C004C8BDC /* ReviewProduct.swift in Sources */,
+				4AFAE1E620EF1537001A5DEB /* RatingControl.swift in Sources */,
 				4AEADB0B20EA15E9004C8BDC /* AddReviewViewController.swift in Sources */,
 				4AC80F4020E8A256004752B2 /* ViewController.swift in Sources */,
 				4AEADB0720EA11E5004C8BDC /* ReviewCollectionViewController.swift in Sources */,
 				4AEFE81C20EC6DBD00B4F409 /* DetailProductsViewController.swift in Sources */,
 				4AC80F5420E8A99B004752B2 /* Product.swift in Sources */,
-				4AEFE81E20ECC1BB00B4F409 /* aViewController.swift in Sources */,
 				4AC80F5020E8A682004752B2 /* ProductCollectionViewCell.swift in Sources */,
 				4AC80F3E20E8A256004752B2 /* AppDelegate.swift in Sources */,
 				4AEADB0920EA1219004C8BDC /* ReviewCollectionViewCell.swift in Sources */,
@@ -318,6 +383,7 @@
 		};
 		4AC80F4D20E8A258004752B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516D095C21CE2634AB805E25 /* Pods-ReviewProdductsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +401,7 @@
 		};
 		4AC80F4E20E8A258004752B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BCF934039B3FCB76A35C086 /* Pods-ReviewProdductsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

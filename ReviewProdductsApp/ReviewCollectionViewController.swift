@@ -1,35 +1,23 @@
-//
-//  ReviewCollectionViewController.swift
-//  ReviewProdductsApp
-//
-//  Created by udom on 2/7/61.
-//  Copyright © พ.ศ. 2561 ReviewProducts. All rights reserved.
-//
+
 import os.log
 import UIKit
 
-private let reuseIdentifier = "reviewCollection"
-
 class ReviewCollectionViewController: UICollectionViewController {
 
-    var reviewProduct = [ReviewProduct]()
+    private let reuseIdentifier = "reviewCollection"
     var productList = [Product]()
-  var products: Product?
-    
+    var productes: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleReview()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.navigationController?.isNavigationBarHidden = false
 
     }
-    private func loadSampleReview() {
-        
-        let review1 = ReviewProduct(productNameInTableView: "computer", detailProductInTableView: "red,back,green")!
-        let review2 = ReviewProduct(productNameInTableView: "printer", detailProductInTableView: "blue,back")!
-        
-        reviewProduct += [review1, review2]
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,53 +29,85 @@ class ReviewCollectionViewController: UICollectionViewController {
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      
-        return reviewProduct.count
+        return (productes?.comment.count)! 
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ReviewCollectionViewCell
-        let showReview = reviewProduct[indexPath.row]
-        cell.detailReviewInCollection.text = showReview.detailProductInTableView
-        cell.nameReviewInCollection.text = showReview.productNameInTableView
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
+        cell.detailReviewInCollection.text = productes?.comment[indexPath.row]
+        cell.nameReviewInCollection.text = productes?.userName[indexPath.row]
+        cell.date.text = productes?.dateTime[indexPath.row]
+        
+        let selepathIcon = productes?.rating[indexPath.row]
+        if selepathIcon == 1 {
+            let emoticonLike = UIImage(named: "emoticonLike")
+            cell.imageIcon.image = emoticonLike
+            
+        } else if selepathIcon == 2 {
+           let emoticonFair = UIImage(named: "emoticonFair")
+            cell.imageIcon.image = emoticonFair
+            
+        } else if selepathIcon == 3 {
+            let emoticonSad = UIImage(named: "emoticonSad")
+            cell.imageIcon.image = emoticonSad
+        }
+        
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.5
         
-   
         return cell
     }
-    @IBAction func unwindToAddReviewProductlList(_ sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddReviewViewController, let addReview = sourceViewController.reviewProducts {
-            
-            // Add a new meal.
-            let newIndexPath = IndexPath(row: reviewProduct.count, section: 0)
-            reviewProduct.append(addReview)
-            collectionView?.insertItems(at: [newIndexPath])
-        }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                         withReuseIdentifier: "ReviewCollectionViewCell",
+                                                                         for: indexPath) as! ReviewCollectionViewCell
+        
+        let number = productes?.countRatingGood
+        print("countRatingGood is \(String(describing: number!))")
+        headerView.countOfGood.text = String(describing: number!)
+        
+        let numberes1 = productes?.countRatingFair
+        print("countRatingFair is \(String(describing: numberes1!))")
+        headerView.countOfFair.text = String(describing: numberes1!)
+        
+        let numberes2 = productes?.countRatingSad
+        print("countRatingSad is \(String(describing: numberes2!))")
+        headerView.countOfSad.text = String(describing: numberes2!)
+        
+        return headerView
     }
     
-    @IBAction func back(_ sender: UIBarButtonItem) {
-        let isPresentingInAddProductMode = presentingViewController is UINavigationController
-        if isPresentingInAddProductMode {
-            dismiss(animated: true, completion: nil)
-        }
-        else if let owningNavigationController = navigationController{
-            owningNavigationController.popViewController(animated: true)
-        }
-        else {
-            fatalError("Error Cancel")
+    @IBAction func unwindToAddReviewProductlList(_ sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddReviewViewController, let addReview = sourceViewController.products {
+            
+            let newIndexPath = IndexPath(row: productList.count, section: 0)
+            productList.append(addReview)
+            collectionView?.insertItems(at: [newIndexPath])
+            collectionView?.reloadSections(IndexSet([0]))
+            //collectionView?.reloadData()
+           
         }
     }
+
+    
+    @IBAction func cancelReviewAll(_ sender: UIBarButtonItem) {
+        if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        collectionView?.reloadData()
+    }
+    
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        let AddReviewViewController = segue.destination as? AddReviewViewController
-        AddReviewViewController?.products = self.products
-            
-     
+            let AddReviewViewController = segue.destination as? AddReviewViewController
+            AddReviewViewController?.products = self.productes
     }
-    
 }

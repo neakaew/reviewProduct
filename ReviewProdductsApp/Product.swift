@@ -1,12 +1,5 @@
-//
-//  Product.swift
-//  ReviewProdductsApp
-//
-//  Created by udom on 1/7/61.
-//  Copyright © พ.ศ. 2561 ReviewProducts. All rights reserved.
-//
+
 import  UIKit
-//import Foundation
 
 class Product {
     
@@ -14,15 +7,24 @@ class Product {
     var productName: String
     var detailProduct: String
     var price: String
-  
+    var comment = [String]()
+    var userName = [String]()
+    var rating = [Int]()
+    var dateTime = [String]()
+    var countRatingGood = Int()
+    var countRatingFair = Int()
+    var countRatingSad = Int()
+    var userNameOfReview = [String]()
     
-    // MARK: Types
     
     struct PropertyKey {
         static let photoKey = "photo"
         static let productNameKey = "productName"
         static let detailProductKey = "detailProduct"
         static let priceKey = "price"
+        static let comment = "comment"
+        static let userName = "userName"
+        
 }
     
     init?(photo: UIImage?, productName: String, detailProduct: String, price: String) {
@@ -30,6 +32,6 @@ class Product {
         self.productName = productName
         self.detailProduct = detailProduct
         self.price = price
-
+        
     }
 }
