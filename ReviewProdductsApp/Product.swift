@@ -14,7 +14,8 @@ class Product {
     var countRatingGood = Int()
     var countRatingFair = Int()
     var countRatingSad = Int()
-    var userNameOfReview = [String]()
+    //var userNameOfReview = [String]()
+    var sumAmountOfReview = Int()
     
     
     struct PropertyKey {

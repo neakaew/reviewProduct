@@ -65,6 +65,11 @@ class AddReviewViewController: UIViewController {
             self.products?.countRatingSad = (products?.countRatingSad)! + 1
         }
         
+        let sumAmountReview = (products?.countRatingGood)! + (products?.countRatingFair)! + (products?.countRatingSad)!
+        print("sum of amount review ----\(sumAmountReview)")
+        self.products?.sumAmountOfReview = sumAmountReview
+        
+        print(products?.countRatingGood ?? "") 
         self.products?.comment.append(commentTextView.text!)
         self.products?.userName.append(nameTextField.text!)
         self.products?.rating.append(RatingControl.rating)

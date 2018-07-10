@@ -18,7 +18,8 @@ class ProductCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for:.default)
     }
     
     func loadSampleProducts() {
@@ -99,6 +100,7 @@ class ProductCollectionViewController: UICollectionViewController {
             myCell.imageCollectionViewCell.image = showproduct.photo
             myCell.nameProductCollection.text = showproduct.productName
             myCell.namePriceCollection.text = showproduct.price + ("฿")
+            myCell.countReview.text = String((showproduct.sumAmountOfReview))
             myCell.layer.borderColor = UIColor.lightGray.cgColor
             myCell.layer.borderWidth = 0.5
             return myCell
@@ -110,11 +112,17 @@ class ProductCollectionViewController: UICollectionViewController {
                                                                          withReuseIdentifier: "ProductCollectionViewCell",
                                                                          for: indexPath) as! ProductCollectionViewCell
 
-        headerView.nameTitle.text = "ABONZO Coffee"
+        //headerView.nameTitle.text = "ABONZO Coffee"
         return headerView
     }
    
     @IBAction func unwindToProductList(_ sender: UIStoryboardSegue) {
+        
+        let number = products?.countRatingGood
+        print("-----\(String(describing: number))")
+        
+        
+        
         if let sourceViewController = sender.source as? ViewController, let product = sourceViewController.products {
             
            if let selectIndewPath = indexPathProduct {
@@ -130,6 +138,7 @@ class ProductCollectionViewController: UICollectionViewController {
             }
             indexPathProduct = nil
         }
+        collection.reloadData()
     }
     
 }
