@@ -14,6 +14,7 @@ class AddReviewViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var buttonAddReview: UIButton!
     @IBOutlet weak var RatingControl: RatingControl!
+    @IBOutlet weak var priceOfProduct: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class AddReviewViewController: UIViewController {
             ShowImageAddReview.image = product.photo
             nameProductAddReview.text = product.productName
             detailTextViewInAddReview.text = product.detailProduct
+            priceOfProduct.text = products?.price
         }
     }
     
@@ -55,16 +57,13 @@ class AddReviewViewController: UIViewController {
         
         if numberRating == 1 {
                 self.products?.countRatingGood = (products?.countRatingGood)! + 1
-            let number = self.products?.countRatingGood
-
-            
+    
         } else if numberRating == 2 {
             self.products?.countRatingFair = (products?.countRatingFair)! + 1
+            
         } else if numberRating == 3 {
             self.products?.countRatingSad = (products?.countRatingSad)! + 1
         }
-        
-        
         
         self.products?.comment.append(commentTextView.text!)
         self.products?.userName.append(nameTextField.text!)

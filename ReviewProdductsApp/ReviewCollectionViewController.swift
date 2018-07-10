@@ -30,17 +30,22 @@ class ReviewCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (productes?.comment.count)! 
+        return (productes?.comment.count)! + 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        if indexPath.item == 0 {
+            let addReviews = collectionView.dequeueReusableCell(withReuseIdentifier: "addReview", for: indexPath) as! ReviewCollectionViewCell
+            addReviews.layer.borderColor = UIColor.lightGray.cgColor
+            addReviews.layer.borderWidth = 0.5
+        return addReviews
+        } else {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
-        cell.detailReviewInCollection.text = productes?.comment[indexPath.row]
-        cell.nameReviewInCollection.text = productes?.userName[indexPath.row]
-        cell.date.text = productes?.dateTime[indexPath.row]
+        cell.detailReviewInCollection.text = productes?.comment[indexPath.row - 1]
+        cell.nameReviewInCollection.text = productes?.userName[indexPath.row - 1]
+        cell.date.text = productes?.dateTime[indexPath.row - 1]
         
-        let selepathIcon = productes?.rating[indexPath.row]
+        let selepathIcon = productes?.rating[indexPath.row - 1]
         if selepathIcon == 1 {
             let emoticonLike = UIImage(named: "emoticonLike")
             cell.imageIcon.image = emoticonLike
@@ -58,6 +63,7 @@ class ReviewCollectionViewController: UICollectionViewController {
         cell.layer.borderWidth = 0.5
         
         return cell
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -68,6 +74,7 @@ class ReviewCollectionViewController: UICollectionViewController {
         let number = productes?.countRatingGood
         print("countRatingGood is \(String(describing: number!))")
         headerView.countOfGood.text = String(describing: number!)
+        //self.productes?.countRatingGood = number!
         
         let numberes1 = productes?.countRatingFair
         print("countRatingFair is \(String(describing: numberes1!))")
@@ -109,5 +116,6 @@ class ReviewCollectionViewController: UICollectionViewController {
         
             let AddReviewViewController = segue.destination as? AddReviewViewController
             AddReviewViewController?.products = self.productes
+ 
     }
 }

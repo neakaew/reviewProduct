@@ -14,6 +14,8 @@ class DetailProductsViewController: UIViewController {
     @IBOutlet weak var detailNamedetailTextView: UITextView!
     @IBOutlet weak var detailPrice: UILabel!
     @IBOutlet weak var coutOfGood: UILabel!
+    @IBOutlet weak var countOfFair: UILabel!
+    @IBOutlet weak var countOfSad: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,9 @@ class DetailProductsViewController: UIViewController {
             detialNameProduct.text = detailProducts.productName
             detailNamedetailTextView.text = detailProducts.detailProduct
             detailPrice.text = detailProducts.price
+            coutOfGood.text = String((detailProducts.countRatingGood))
+            countOfFair.text = String((detailProducts.countRatingFair))
+            countOfSad.text = String((detailProducts.countRatingSad))
         
         }
     }
@@ -59,45 +64,16 @@ class DetailProductsViewController: UIViewController {
     
     @IBAction func cancelDetailProduct(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+        
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return (productes?.comment.count)! + 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        if indexPath.item == 0 {
-//            let buttonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "addReviewCollection", for: indexPath) as! ReviewCollectionViewCell
-//            return buttonCell
-//
-//        } else {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewOfDetail", for: indexPath) as! ReviewCollectionViewCell
-//        cell.nameOfProduct.text = productes?.userName[indexPath.row]
-//        cell.detailOfProduct.text = productes?.comment[indexPath.row]
-//
-//        let selepathIcon = productes?.rating[indexPath.row]
-//        if selepathIcon == 1 {
-//            let emoticonLike = UIImage(named: "emoticonLike")
-//            cell.imageOfProduct.image = emoticonLike
-//
-//        } else if selepathIcon == 2 {
-//            let emoticonFair = UIImage(named: "emoticonFair")
-//            cell.imageOfProduct.image = emoticonFair
-//
-//        } else if selepathIcon == 3 {
-//            let emoticonSad = UIImage(named: "emoticonSad")
-//            cell.imageOfProduct.image = emoticonSad
-//        }
-//
-//
-//        return cell
-//        }
-//    }
+    @IBAction func unwindToDetiail(_ sender: UIStoryboardSegue) {
+        
+
+        coutOfGood.text = String((products?.countRatingGood)!)
+        countOfFair.text = String((products?.countRatingFair)!)
+        countOfSad.text = String((products?.countRatingSad)!)
+    }
     
 }
 
