@@ -69,12 +69,32 @@ class AddReviewViewController: UIViewController {
         print("sum of amount review ----\(sumAmountReview)")
         self.products?.sumAmountOfReview = sumAmountReview
         
+        
+        if (self.products?.countRatingGood)! > (self.products?.countRatingFair)! && (self.products?.countRatingGood)! > (self.products?.countRatingSad)! {
+            self.products?.maxOfReview = (products?.countRatingGood)!
+            print("จำนวนรีวิวทั้งหมด\(String((products?.maxOfReview)!))")
+            self.products?.imageOfReview = UIImage(named: "emoticonLike")!
+            
+        } else if (self.products?.countRatingFair)! > (self.products?.countRatingGood)! && (self.products?.countRatingFair)! > (self.products?.countRatingSad)! {
+            self.products?.maxOfReview = (products?.countRatingFair)!
+            print("จำนวนรีวิวทั้งหมด\(String((products?.countRatingFair)!))")
+            self.products?.imageOfReview = UIImage(named: "emoticonFair")!
+            
+        } else if (self.products?.countRatingSad)! > (self.products?.countRatingGood)! && (self.products?.countRatingSad)! > (self.products?.countRatingFair)! {
+            self.products?.maxOfReview = (products?.countRatingSad)!
+            print("จำนวนรีวิวทั้งหมด\(String((products?.countRatingSad)!))")
+            self.products?.imageOfReview = UIImage(named: "emoticonSad")!
+            
+        } else if (self.products?.countRatingGood) == (self.products?.countRatingFair) {
+            
+        }
+        
+        
+        
         print(products?.countRatingGood ?? "") 
         self.products?.comment.append(commentTextView.text!)
         self.products?.userName.append(nameTextField.text!)
         self.products?.rating.append(RatingControl.rating)
-        
-        
         
         let dateNow = NSDate()
         let formatDate = DateFormatter()

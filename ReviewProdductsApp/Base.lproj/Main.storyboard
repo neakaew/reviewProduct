@@ -182,8 +182,6 @@
         <!--สินค้า-->
         <scene sceneID="idL-1i-5HY">
             <objects>
-                <exit id="xSq-4X-G6G" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MBV-hp-OUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="E6i-5c-vdt" customClass="DetailProductsViewController" customModule="ReviewProdductsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aJy-Bt-IDH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -361,6 +359,8 @@
                         <outlet property="detialShowPhoto" destination="wuP-9e-Hg9" id="WDM-eX-pOv"/>
                     </connections>
                 </viewController>
+                <exit id="xSq-4X-G6G" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBV-hp-OUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3724" y="-767.76611694152928"/>
         </scene>
@@ -920,8 +920,11 @@
                                             <color key="textColor" red="0.02707154975" green="0.66215997410000005" blue="0.2119860019" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoticonLike" translatesAutoresizingMaskIntoConstraints="NO" id="Xla-7V-guF">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoticonSad" translatesAutoresizingMaskIntoConstraints="NO" id="Xla-7V-guF">
                                             <rect key="frame" x="10" y="172" width="24" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Xla-7V-guF" secondAttribute="height" multiplier="12:13" id="JCM-Wf-CQ1"/>
+                                            </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online" translatesAutoresizingMaskIntoConstraints="NO" id="b3L-53-RPs">
                                             <rect key="frame" x="95" y="185" width="14" height="13"/>
@@ -938,32 +941,42 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-GJ-X3G">
+                                            <rect key="frame" x="49" y="177" width="10" height="21"/>
+                                            <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Xla-7V-guF" firstAttribute="top" secondItem="5kI-j9-OKf" secondAttribute="bottom" constant="2" id="1mc-pZ-edO"/>
                                     <constraint firstItem="5kI-j9-OKf" firstAttribute="leading" secondItem="Edh-OG-v6M" secondAttribute="leading" constant="8" id="4Sl-9w-UbG"/>
-                                    <constraint firstItem="b3L-53-RPs" firstAttribute="leading" secondItem="Xla-7V-guF" secondAttribute="trailing" constant="61" id="5Gq-wg-Uo6"/>
                                     <constraint firstAttribute="trailing" secondItem="5kI-j9-OKf" secondAttribute="trailing" constant="69" id="ClW-MN-WUz"/>
+                                    <constraint firstItem="7h3-GJ-X3G" firstAttribute="leading" secondItem="Xla-7V-guF" secondAttribute="trailing" constant="15" id="Ezs-9a-2Fi"/>
                                     <constraint firstItem="EqS-Tn-4CC" firstAttribute="top" secondItem="RXB-ru-JVb" secondAttribute="bottom" constant="38" id="GlR-W3-oCq"/>
+                                    <constraint firstItem="7h3-GJ-X3G" firstAttribute="leading" secondItem="Xla-7V-guF" secondAttribute="trailing" constant="15" id="HYk-ui-l7b"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xla-7V-guF" secondAttribute="bottom" constant="4" id="IO5-Vy-tad"/>
                                     <constraint firstItem="c3G-Kv-fXj" firstAttribute="leading" secondItem="Edh-OG-v6M" secondAttribute="leading" id="KWR-Yc-2zP"/>
                                     <constraint firstItem="EqS-Tn-4CC" firstAttribute="leading" secondItem="b3L-53-RPs" secondAttribute="trailing" constant="13" id="M32-G4-HtM"/>
                                     <constraint firstItem="hsV-LQ-QDf" firstAttribute="top" secondItem="RXB-ru-JVb" secondAttribute="bottom" constant="38" id="MaP-Ni-dYw"/>
                                     <constraint firstItem="RXB-ru-JVb" firstAttribute="top" secondItem="Edh-OG-v6M" secondAttribute="top" constant="126" id="Myx-Fx-5fs"/>
                                     <constraint firstItem="RXB-ru-JVb" firstAttribute="leading" secondItem="Edh-OG-v6M" secondAttribute="leading" constant="8" id="NbR-CI-ZBI"/>
                                     <constraint firstAttribute="bottom" secondItem="b3L-53-RPs" secondAttribute="bottom" constant="4" id="Qmr-ev-uq7"/>
+                                    <constraint firstItem="Xla-7V-guF" firstAttribute="top" secondItem="5kI-j9-OKf" secondAttribute="bottom" constant="2" id="U8l-W2-8g8"/>
                                     <constraint firstAttribute="trailing" secondItem="EqS-Tn-4CC" secondAttribute="trailing" constant="14.5" id="V4r-PX-hoZ"/>
                                     <constraint firstItem="b3L-53-RPs" firstAttribute="top" secondItem="RXB-ru-JVb" secondAttribute="bottom" constant="38" id="Xbc-kq-xRr"/>
                                     <constraint firstAttribute="bottom" secondItem="5kI-j9-OKf" secondAttribute="bottom" constant="32" id="XfK-pF-Rd5"/>
                                     <constraint firstAttribute="trailing" secondItem="c3G-Kv-fXj" secondAttribute="trailing" id="ZFf-py-aJE"/>
                                     <constraint firstAttribute="bottom" secondItem="hsV-LQ-QDf" secondAttribute="bottom" constant="4" id="ZQ4-9f-WyN"/>
-                                    <constraint firstItem="Xla-7V-guF" firstAttribute="leading" secondItem="Edh-OG-v6M" secondAttribute="leading" constant="10" id="bqy-Zc-wV4"/>
                                     <constraint firstItem="EqS-Tn-4CC" firstAttribute="leading" secondItem="b3L-53-RPs" secondAttribute="trailing" constant="13" id="cLN-eu-6d7"/>
                                     <constraint firstAttribute="bottom" secondItem="EqS-Tn-4CC" secondAttribute="bottom" constant="5" id="cu3-KV-g1W"/>
                                     <constraint firstAttribute="bottom" secondItem="c3G-Kv-fXj" secondAttribute="bottom" constant="80" id="hhd-Cq-QB6"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xla-7V-guF" secondAttribute="bottom" constant="4" id="pD4-Aw-j0T"/>
+                                    <constraint firstItem="b3L-53-RPs" firstAttribute="leading" secondItem="7h3-GJ-X3G" secondAttribute="trailing" constant="36" id="kgn-Fl-aPU"/>
+                                    <constraint firstItem="7h3-GJ-X3G" firstAttribute="top" secondItem="5kI-j9-OKf" secondAttribute="bottom" constant="7" id="l2a-pW-9DK"/>
+                                    <constraint firstAttribute="bottom" secondItem="7h3-GJ-X3G" secondAttribute="bottom" constant="4" id="ohw-OX-DN6"/>
                                     <constraint firstItem="c3G-Kv-fXj" firstAttribute="top" secondItem="Edh-OG-v6M" secondAttribute="top" id="sTj-UZ-moK"/>
+                                    <constraint firstItem="Xla-7V-guF" firstAttribute="leading" secondItem="Edh-OG-v6M" secondAttribute="leading" constant="10" id="uqx-3B-PSy"/>
                                     <constraint firstAttribute="bottom" secondItem="RXB-ru-JVb" secondAttribute="bottom" constant="55" id="uuL-cq-2dk"/>
                                     <constraint firstItem="hsV-LQ-QDf" firstAttribute="leading" secondItem="b3L-53-RPs" secondAttribute="trailing" id="vVo-Bc-Jxg"/>
                                     <constraint firstAttribute="trailing" secondItem="RXB-ru-JVb" secondAttribute="trailing" id="w5z-jF-x0v"/>
@@ -979,6 +992,8 @@
                                 <connections>
                                     <outlet property="countReview" destination="hsV-LQ-QDf" id="iaM-WD-eZ0"/>
                                     <outlet property="imageCollectionViewCell" destination="c3G-Kv-fXj" id="slz-gE-9h2"/>
+                                    <outlet property="imageOfReview" destination="Xla-7V-guF" id="gXR-WS-9TW"/>
+                                    <outlet property="maxOfReview" destination="7h3-GJ-X3G" id="aYD-ZK-OUY"/>
                                     <outlet property="namePriceCollection" destination="5kI-j9-OKf" id="brP-aN-93t"/>
                                     <outlet property="nameProductCollection" destination="RXB-ru-JVb" id="S4f-eI-uMn"/>
                                     <segue destination="E6i-5c-vdt" kind="show" identifier="ShowDetail" id="yhb-VL-Eia"/>
@@ -1307,6 +1322,6 @@ tTfHN8o3zwAAAAAAAAIBAAAAAAAAAFkAAAAAAAAAAAAAAAAAADfRA
         <image name="rectangle" width="250" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uhz-GU-Z1T"/>
+        <segue reference="d2l-Id-bNL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -101,6 +101,8 @@ class ProductCollectionViewController: UICollectionViewController {
             myCell.nameProductCollection.text = showproduct.productName
             myCell.namePriceCollection.text = showproduct.price + ("฿")
             myCell.countReview.text = String((showproduct.sumAmountOfReview))
+            myCell.imageOfReview.image = showproduct.imageOfReview
+            myCell.maxOfReview.text = String((showproduct.maxOfReview))
             myCell.layer.borderColor = UIColor.lightGray.cgColor
             myCell.layer.borderWidth = 0.5
             return myCell
@@ -117,12 +119,7 @@ class ProductCollectionViewController: UICollectionViewController {
     }
    
     @IBAction func unwindToProductList(_ sender: UIStoryboardSegue) {
-        
-        let number = products?.countRatingGood
-        print("-----\(String(describing: number))")
-        
-        
-        
+
         if let sourceViewController = sender.source as? ViewController, let product = sourceViewController.products {
             
            if let selectIndewPath = indexPathProduct {

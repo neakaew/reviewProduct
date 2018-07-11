@@ -9,6 +9,8 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backgroundHeader: UIImageView!
     @IBOutlet weak var nameTitle: UILabel!
     @IBOutlet weak var countReview: UILabel!
+    @IBOutlet weak var imageOfReview: UIImageView!
+    @IBOutlet weak var maxOfReview: UILabel!
     
     
 }

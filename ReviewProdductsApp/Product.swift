@@ -16,6 +16,10 @@ class Product {
     var countRatingSad = Int()
     //var userNameOfReview = [String]()
     var sumAmountOfReview = Int()
+    var maxOfReview = Int()
+    var imageOfReview = UIImage()
+    
+    
     
     
     struct PropertyKey {
