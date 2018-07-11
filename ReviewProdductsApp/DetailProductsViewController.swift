@@ -78,7 +78,7 @@ class DetailProductsViewController: UIViewController ,UICollectionViewDelegate, 
    
     
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  (products?.comment.count)! 
+        return  (products?.comment.count)!
     }
     
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
