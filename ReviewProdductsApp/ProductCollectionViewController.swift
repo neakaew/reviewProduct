@@ -4,7 +4,6 @@ import UIKit
 
 class ProductCollectionViewController: UICollectionViewController {
 
-
     @IBOutlet var collection: UICollectionView!
 
     var productList = [Product]()
@@ -18,8 +17,8 @@ class ProductCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for:.default)
+        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.navigationBar.setBackgroundImage(nil, for:.default)
     }
     
     func loadSampleProducts() {
@@ -113,8 +112,9 @@ class ProductCollectionViewController: UICollectionViewController {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                          withReuseIdentifier: "ProductCollectionViewCell",
                                                                          for: indexPath) as! ProductCollectionViewCell
-
-        //headerView.nameTitle.text = "ABONZO Coffee"
+        
+        headerView.nameTitle.text = "ABONZO Coffee"
+        headerView.logo.image = UIImage(named: "logo")
         return headerView
     }
    
@@ -131,7 +131,6 @@ class ProductCollectionViewController: UICollectionViewController {
                 let newIndexPath = IndexPath(row: productList.count + 1, section: 0)
                 productList.append(product)
                 collectionView?.insertItems(at: [newIndexPath])
-            print("----------\(newIndexPath)")
             }
             indexPathProduct = nil
         }

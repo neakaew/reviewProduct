@@ -14,13 +14,9 @@ class Product {
     var countRatingGood = Int()
     var countRatingFair = Int()
     var countRatingSad = Int()
-    //var userNameOfReview = [String]()
     var sumAmountOfReview = Int()
     var maxOfReview = Int()
     var imageOfReview = UIImage()
-    
-    
-    
     
     struct PropertyKey {
         static let photoKey = "photo"
@@ -29,7 +25,6 @@ class Product {
         static let priceKey = "price"
         static let comment = "comment"
         static let userName = "userName"
-        
 }
     
     init?(photo: UIImage?, productName: String, detailProduct: String, price: String) {

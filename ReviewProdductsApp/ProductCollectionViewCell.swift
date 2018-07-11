@@ -11,6 +11,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var countReview: UILabel!
     @IBOutlet weak var imageOfReview: UIImageView!
     @IBOutlet weak var maxOfReview: UILabel!
+    @IBOutlet weak var logo: UIImageView!
     
     
 }

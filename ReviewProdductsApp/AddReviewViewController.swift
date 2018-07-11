@@ -5,7 +5,6 @@ import UIKit
 class AddReviewViewController: UIViewController {
 
     var products: Product?
-    var productList = [Product]()
     
     @IBOutlet weak var detailTextViewInAddReview: UITextView!
     @IBOutlet weak var ShowImageAddReview: UIImageView!
@@ -53,8 +52,6 @@ class AddReviewViewController: UIViewController {
         }
         
         let numberRating = RatingControl.rating
-        print("----------numberRating---------\(String(describing: numberRating))")
-        
         if numberRating == 1 {
                 self.products?.countRatingGood = (products?.countRatingGood)! + 1
     
@@ -66,31 +63,27 @@ class AddReviewViewController: UIViewController {
         }
         
         let sumAmountReview = (products?.countRatingGood)! + (products?.countRatingFair)! + (products?.countRatingSad)!
-        print("sum of amount review ----\(sumAmountReview)")
         self.products?.sumAmountOfReview = sumAmountReview
         
         
         if (self.products?.countRatingGood)! > (self.products?.countRatingFair)! && (self.products?.countRatingGood)! > (self.products?.countRatingSad)! {
             self.products?.maxOfReview = (products?.countRatingGood)!
-            print("จำนวนรีวิวทั้งหมด\(String((products?.maxOfReview)!))")
             self.products?.imageOfReview = UIImage(named: "emoticonLike")!
             
         } else if (self.products?.countRatingFair)! > (self.products?.countRatingGood)! && (self.products?.countRatingFair)! > (self.products?.countRatingSad)! {
             self.products?.maxOfReview = (products?.countRatingFair)!
-            print("จำนวนรีวิวทั้งหมด\(String((products?.countRatingFair)!))")
             self.products?.imageOfReview = UIImage(named: "emoticonFair")!
             
         } else if (self.products?.countRatingSad)! > (self.products?.countRatingGood)! && (self.products?.countRatingSad)! > (self.products?.countRatingFair)! {
             self.products?.maxOfReview = (products?.countRatingSad)!
-            print("จำนวนรีวิวทั้งหมด\(String((products?.countRatingSad)!))")
             self.products?.imageOfReview = UIImage(named: "emoticonSad")!
             
-        } else if (self.products?.countRatingGood) == (self.products?.countRatingFair) {
-            
+        } else {
+            self.products?.maxOfReview = (self.products?.countRatingGood)!
+            self.products?.imageOfReview = UIImage(named: "emoticonLike")!
         }
         
-        
-        
+
         print(products?.countRatingGood ?? "") 
         self.products?.comment.append(commentTextView.text!)
         self.products?.userName.append(nameTextField.text!)

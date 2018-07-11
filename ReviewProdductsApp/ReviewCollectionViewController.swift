@@ -72,16 +72,10 @@ class ReviewCollectionViewController: UICollectionViewController {
                                                                          for: indexPath) as! ReviewCollectionViewCell
         
         let number = productes?.countRatingGood
-        print("countRatingGood is \(String(describing: number!))")
-        headerView.countOfGood.text = String(describing: number!)
-        //self.productes?.countRatingGood = number!
-        
         let numberes1 = productes?.countRatingFair
-        print("countRatingFair is \(String(describing: numberes1!))")
-        headerView.countOfFair.text = String(describing: numberes1!)
-        
         let numberes2 = productes?.countRatingSad
-        print("countRatingSad is \(String(describing: numberes2!))")
+        headerView.countOfGood.text = String(describing: number!)
+        headerView.countOfFair.text = String(describing: numberes1!)
         headerView.countOfSad.text = String(describing: numberes2!)
         
         return headerView
@@ -94,23 +88,11 @@ class ReviewCollectionViewController: UICollectionViewController {
             productList.append(addReview)
             collectionView?.insertItems(at: [newIndexPath])
             collectionView?.reloadSections(IndexSet([0]))
-            //collectionView?.reloadData()
+            collectionView?.reloadData()
            
         }
     }
 
-    
-    @IBAction func cancelReviewAll(_ sender: UIBarButtonItem) {
-        if let owningNavigationController = navigationController{
-            owningNavigationController.popViewController(animated: true)
-        }
-        collectionView?.reloadData()
-    }
-    
-    
-    
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         

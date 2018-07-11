@@ -4,10 +4,8 @@ import os.log
 
 class DetailProductsViewController: UIViewController {
 
+   
     var products: Product?
-    var productes: Product?
-    var productCount: Product?
-    
     
     @IBOutlet weak var detialShowPhoto: UIImageView!
     @IBOutlet weak var detialNameProduct: UILabel!
@@ -36,8 +34,6 @@ class DetailProductsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         self.navigationController?.isNavigationBarHidden = false
-        let number = productes?.countRatingGood
-        print("count number is \(String(describing: number))")
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,17 +58,50 @@ class DetailProductsViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelDetailProduct(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-        
-    }
     
     @IBAction func unwindToDetiail(_ sender: UIStoryboardSegue) {
         
-
         coutOfGood.text = String((products?.countRatingGood)!)
         countOfFair.text = String((products?.countRatingFair)!)
         countOfSad.text = String((products?.countRatingSad)!)
+    
+    }
+    
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (products?.comment.count)! + 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
+        cell.detailOfProduct.text = products?.comment[indexPath.row - 1]
+        //            cell.nameReviewInCollection.text = products?.userName[indexPath.row - 1]
+        //            cell.date.text = products?.dateTime[indexPath.row - 1]
+        //
+        //            let selepathIcon = products?.rating[indexPath.row - 1]
+        //            if selepathIcon == 1 {
+        //                let emoticonLike = UIImage(named: "emoticonLike")
+        //                cell.imageIcon.image = emoticonLike
+        //
+        //            } else if selepathIcon == 2 {
+        //                let emoticonFair = UIImage(named: "emoticonFair")
+        //                cell.imageIcon.image = emoticonFair
+        
+        //
+        //            } else if selepathIcon == 3 {
+        //                let emoticonSad = UIImage(named: "emoticonSad")
+        //                cell.imageIcon.image = emoticonSad
+        //            }
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.5
+        collectionView.reloadData()
+        
+        return cell
     }
     
 }
