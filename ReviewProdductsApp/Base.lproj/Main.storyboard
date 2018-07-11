@@ -17,6 +17,7 @@
         </array>
         <array key="SukhumvitSet.ttc">
             <string>SukhumvitSet-Bold</string>
+            <string>SukhumvitSet-Light</string>
             <string>SukhumvitSet-Medium</string>
             <string>SukhumvitSet-SemiBold</string>
             <string>SukhumvitSet-Text</string>
@@ -167,21 +168,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-W9-COz">
-                                <rect key="frame" x="16" y="350" width="343" height="111"/>
+                                <rect key="frame" x="16" y="383" width="343" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Medium" family="Sukhumvit Set" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="รีวิวสินค้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-GF-BMi">
-                                <rect key="frame" x="16" y="496" width="93" height="21"/>
+                                <rect key="frame" x="16" y="569" width="93" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWt-YS-UBb">
-                                <rect key="frame" x="279" y="496" width="80" height="19"/>
+                                <rect key="frame" x="279" y="569" width="80" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="15"/>
                                 <state key="normal" title="รีวิวทั้งหมด &gt;">
@@ -192,33 +193,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKG-8L-jSC">
-                                <rect key="frame" x="75" y="451" width="14" height="21"/>
+                                <rect key="frame" x="75" y="524" width="14" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-sO-ouE">
-                                <rect key="frame" x="327" y="448" width="11" height="27"/>
+                                <rect key="frame" x="327" y="521" width="11" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emoticonLike" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-nN-ByT">
-                                <rect key="frame" x="40" y="445" width="27" height="27"/>
+                                <rect key="frame" x="40" y="518" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emoticonFair" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-O0-8nJ">
-                                <rect key="frame" x="174" y="445" width="27" height="27"/>
+                                <rect key="frame" x="174" y="518" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emoticonSad" translatesAutoresizingMaskIntoConstraints="NO" id="XMM-z2-tXG">
-                                <rect key="frame" x="294" y="445" width="27" height="27"/>
+                                <rect key="frame" x="294" y="518" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVZ-fd-s5X">
-                                <rect key="frame" x="209" y="451" width="13" height="21"/>
+                                <rect key="frame" x="209" y="524" width="13" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -229,7 +230,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cuW-K3-f8V">
-                                <rect key="frame" x="16" y="524" width="343" height="135"/>
+                                <rect key="frame" x="16" y="597" width="343" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vqv-Bc-hID">
@@ -275,9 +276,12 @@
                                         </view>
                                         <connections>
                                             <outlet property="dateOfProduct" destination="Lcj-jR-2nD" id="ptw-Kf-odM"/>
+                                            <outlet property="dateOfReview" destination="Lcj-jR-2nD" id="4C8-cJ-FOE"/>
                                             <outlet property="detailOfProduct" destination="LG9-Tl-c9h" id="kcq-1f-wDB"/>
                                             <outlet property="imageOfProduct" destination="YCT-hW-m0i" id="lTc-DK-678"/>
+                                            <outlet property="imageOfReview" destination="YCT-hW-m0i" id="Rgu-WS-AFa"/>
                                             <outlet property="nameOfProduct" destination="hVn-mq-kXI" id="W9c-06-WhX"/>
+                                            <outlet property="userNameOfReview" destination="hVn-mq-kXI" id="bjS-DK-AJ6"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -297,20 +301,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2d-cA-Ter">
-                                <rect key="frame" x="0.0" y="430" width="375" height="10"/>
+                                <rect key="frame" x="0.0" y="503" width="375" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GrO-lY-suq">
-                                <rect key="frame" x="0.0" y="477" width="375" height="10"/>
+                                <rect key="frame" x="0.0" y="550" width="375" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPy-PV-Y4Z">
-                                <rect key="frame" x="10" y="495" width="4" height="24"/>
+                                <rect key="frame" x="10" y="568" width="4" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.6588235294" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="รายลเอียดสินค้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70C-ud-QGM">
+                                <rect key="frame" x="16" y="354" width="90" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SukhumvitSet-Light" family="Sukhumvit Set" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0w7-3H-h2n"/>
@@ -341,7 +352,7 @@
                 <exit id="xSq-4X-G6G" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBV-hp-OUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="-767.76611694152928"/>
+            <point key="canvasLocation" x="3724" y="-768.4729064039409"/>
         </scene>
         <!--รีวิวสินค้า-->
         <scene sceneID="kXX-RV-aMC">
@@ -365,7 +376,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="wcT-IU-6Ki">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="group-1" translatesAutoresizingMaskIntoConstraints="NO" id="wcT-IU-6Ki">
                                             <rect key="frame" x="20" y="18" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -398,10 +409,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="178"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="la6-2Z-uvc">
-                                            <rect key="frame" x="92" y="55" width="231" height="103"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="la6-2Z-uvc">
+                                            <rect key="frame" x="82" y="62" width="231" height="94"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="231" id="6Z5-JF-Bq4"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -431,6 +444,12 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="la6-2Z-uvc" secondAttribute="trailing" constant="22" id="6Jt-dP-Old"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="la6-2Z-uvc" secondAttribute="bottom" constant="14" id="iWu-xr-Acp"/>
+                                    <constraint firstItem="la6-2Z-uvc" firstAttribute="top" secondItem="ayz-FA-OBe" secondAttribute="topMargin" constant="10" id="vyV-gq-Xg9"/>
+                                    <constraint firstItem="la6-2Z-uvc" firstAttribute="leading" secondItem="ayz-FA-OBe" secondAttribute="leadingMargin" constant="74" id="wN2-rP-3VE"/>
+                                </constraints>
                                 <size key="customSize" width="343" height="178"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -539,32 +558,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5R-Vu-4W0">
-                                <rect key="frame" x="16" y="272" width="343" height="27"/>
+                                <rect key="frame" x="16" y="278" width="343" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0003" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-xI-c7T">
-                                <rect key="frame" x="69" y="67" width="236" height="203"/>
+                                <rect key="frame" x="69" y="88" width="236" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zca-tV-HTx">
-                                <rect key="frame" x="16" y="352" width="343" height="55"/>
+                                <rect key="frame" x="16" y="367" width="343" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Medium" family="Sukhumvit Set" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="คุณรู้สึกอย่างไร ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nig-ZV-QUO">
-                                <rect key="frame" x="16" y="419" width="343" height="21"/>
+                                <rect key="frame" x="16" y="495" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV1-He-sCF">
-                                <rect key="frame" x="62" y="611" width="250" height="48"/>
+                                <rect key="frame" x="62" y="690" width="250" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="เพิ่มสินค้า" image="rectangle"/>
@@ -573,42 +592,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="เพิ่มสินค้า" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="or4-xl-yJr">
-                                <rect key="frame" x="129" y="625" width="117" height="21"/>
+                                <rect key="frame" x="129" y="704" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="180 ฿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpE-Pd-WDV">
-                                <rect key="frame" x="16" y="302" width="343" height="21"/>
+                                <rect key="frame" x="16" y="308" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Bold" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.6588235294" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="รายละเอียดสินค้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-Yg-iwa">
-                                <rect key="frame" x="16" y="325" width="114" height="27"/>
+                                <rect key="frame" x="16" y="338" width="114" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2Ni-sa-gbq" customClass="RatingControl" customModule="ReviewProdductsApp" customModuleProvider="target">
-                                <rect key="frame" x="82" y="446" width="240" height="50"/>
+                                <rect key="frame" x="82" y="523" width="240" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-I2-Vu9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem id="gWP-Cx-ulg">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon" id="oQ8-jR-Lv8"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-eW-MAR" customClass="JVFloatLabeledTextView">
-                                <rect key="frame" x="16" y="500" width="343" height="50"/>
+                                <rect key="frame" x="16" y="579" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Medium" family="Sukhumvit Set" pointSize="17"/>
@@ -624,7 +633,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-3v-JuF" customClass="JVFloatLabeledTextView">
-                                <rect key="frame" x="16" y="553" width="343" height="50"/>
+                                <rect key="frame" x="16" y="633" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -640,6 +649,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyn-P0-7Of">
+                                <rect key="frame" x="0.0" y="470" width="375" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mBh-ye-11Q"/>
@@ -665,7 +679,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewk-1F-VCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wWg-ej-749" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5542" y="-768"/>
+            <point key="canvasLocation" x="5541.6000000000004" y="-768.4729064039409"/>
         </scene>
         <!--Product Collection View Controller-->
         <scene sceneID="LVB-Pb-gf7">
@@ -907,6 +921,7 @@
         <image name="emoticonLike" width="24" height="24"/>
         <image name="emoticonSad" width="24" height="24"/>
         <image name="group" width="375" height="78"/>
+        <image name="group-1" width="52" height="52"/>
         <image name="icon" width="12" height="21"/>
         <image name="iconExpiredDate" width="16" height="15"/>
         <image name="imageView:ndG-yV-qUx:image" width="46" height="46">
@@ -1159,6 +1174,6 @@ tTfHN8o3zwAAAAAAAAIBAAAAAAAAAFkAAAAAAAAAAAAAAAAAADfRA
         <image name="rectangle" width="250" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d2l-Id-bNL"/>
+        <segue reference="Uhz-GU-Z1T"/>
     </inferredMetricsTieBreakers>
 </document>

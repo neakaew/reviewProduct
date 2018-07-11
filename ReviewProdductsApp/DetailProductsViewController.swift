@@ -22,7 +22,7 @@ class DetailProductsViewController: UIViewController {
             detialShowPhoto.image = detailProducts.photo
             detialNameProduct.text = detailProducts.productName
             detailNamedetailTextView.text = detailProducts.detailProduct
-            detailPrice.text = detailProducts.price
+            detailPrice.text = detailProducts.price + "฿"
             coutOfGood.text = String((detailProducts.countRatingGood))
             countOfFair.text = String((detailProducts.countRatingFair))
             countOfSad.text = String((detailProducts.countRatingSad))
@@ -60,11 +60,11 @@ class DetailProductsViewController: UIViewController {
     
     
     @IBAction func unwindToDetiail(_ sender: UIStoryboardSegue) {
-        
+ 
         coutOfGood.text = String((products?.countRatingGood)!)
         countOfFair.text = String((products?.countRatingFair)!)
         countOfSad.text = String((products?.countRatingSad)!)
-    
+
     }
     
     
@@ -80,23 +80,23 @@ class DetailProductsViewController: UIViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
         cell.detailOfProduct.text = products?.comment[indexPath.row - 1]
-        //            cell.nameReviewInCollection.text = products?.userName[indexPath.row - 1]
-        //            cell.date.text = products?.dateTime[indexPath.row - 1]
-        //
-        //            let selepathIcon = products?.rating[indexPath.row - 1]
-        //            if selepathIcon == 1 {
-        //                let emoticonLike = UIImage(named: "emoticonLike")
-        //                cell.imageIcon.image = emoticonLike
-        //
-        //            } else if selepathIcon == 2 {
-        //                let emoticonFair = UIImage(named: "emoticonFair")
-        //                cell.imageIcon.image = emoticonFair
+                    cell.userNameOfReview.text = products?.userName[indexPath.row - 1]
+                    cell.dateOfReview.text = products?.dateTime[indexPath.row - 1]
         
-        //
-        //            } else if selepathIcon == 3 {
-        //                let emoticonSad = UIImage(named: "emoticonSad")
-        //                cell.imageIcon.image = emoticonSad
-        //            }
+                    let selepathIcon = products?.rating[indexPath.row - 1]
+                    if selepathIcon == 1 {
+                        let emoticonLike = UIImage(named: "emoticonLike")
+                        cell.imageOfReview.image = emoticonLike
+        
+                    } else if selepathIcon == 2 {
+                        let emoticonFair = UIImage(named: "emoticonFair")
+                        cell.imageOfReview.image = emoticonFair
+        
+        
+                    } else if selepathIcon == 3 {
+                        let emoticonSad = UIImage(named: "emoticonSad")
+                        cell.imageOfReview.image = emoticonSad
+                    }
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.5
         collectionView.reloadData()

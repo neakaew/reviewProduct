@@ -10,9 +10,11 @@ class ReviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameOfProduct: UILabel!
     @IBOutlet weak var dateOfProduct: UILabel!
     @IBOutlet weak var imageOfProduct: UIImageView!
-    @IBOutlet weak var detailOfProduct: UITextView!
     @IBOutlet weak var countOfGood: UILabel!
     @IBOutlet weak var countOfFair: UILabel!
     @IBOutlet weak var countOfSad: UILabel!
-    
+    @IBOutlet weak var detailOfProduct: UITextView!
+    @IBOutlet weak var userNameOfReview: UILabel!
+    @IBOutlet weak var imageOfReview: UIImageView!
+    @IBOutlet weak var dateOfReview: UILabel!
 }

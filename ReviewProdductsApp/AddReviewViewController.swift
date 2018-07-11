@@ -4,7 +4,8 @@ import UIKit
 
 class AddReviewViewController: UIViewController {
 
-    var products: Product?
+    var
+    products: Product?
     
     @IBOutlet weak var detailTextViewInAddReview: UITextView!
     @IBOutlet weak var ShowImageAddReview: UIImageView!
@@ -94,6 +95,9 @@ class AddReviewViewController: UIViewController {
         formatDate.dateFormat = "dd/MM/yyyy"
         formatDate.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone?
         self.products?.dateTime.append(formatDate.string(from: dateNow as Date))
+        
+        let AddReviewViewController = segue.destination as? DetailProductsViewController
+        AddReviewViewController?.products = self.products
         
     }
     

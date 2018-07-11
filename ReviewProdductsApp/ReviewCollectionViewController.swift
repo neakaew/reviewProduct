@@ -37,7 +37,13 @@ class ReviewCollectionViewController: UICollectionViewController {
         if indexPath.item == 0 {
             let addReviews = collectionView.dequeueReusableCell(withReuseIdentifier: "addReview", for: indexPath) as! ReviewCollectionViewCell
             addReviews.layer.borderColor = UIColor.lightGray.cgColor
-            addReviews.layer.borderWidth = 0.5
+            addReviews.layer.borderWidth = 1
+    
+            addReviews.layer.shadowColor = UIColor.black.cgColor
+            addReviews.layer.shadowOpacity = 1
+            addReviews.layer.masksToBounds = false
+            addReviews.frame = CGRect(x: addReviews.frame.origin.x, y: addReviews.frame.origin.y, width: 343, height: 88)
+          
         return addReviews
         } else {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
@@ -60,7 +66,14 @@ class ReviewCollectionViewController: UICollectionViewController {
         }
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 0.5
+        cell.layer.borderWidth = 1
+            
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOpacity = 1
+        cell.layer.masksToBounds = false
+        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: 343, height: 178)
+        
+            
         
         return cell
         }
@@ -89,6 +102,7 @@ class ReviewCollectionViewController: UICollectionViewController {
             collectionView?.insertItems(at: [newIndexPath])
             collectionView?.reloadSections(IndexSet([0]))
             collectionView?.reloadData()
+            
            
         }
     }

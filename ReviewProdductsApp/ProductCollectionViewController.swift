@@ -91,6 +91,9 @@ class ProductCollectionViewController: UICollectionViewController {
             let buttonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "buttoncell", for: indexPath) as! ProductCollectionViewCell
             buttonCell.layer.borderColor = UIColor.lightGray.cgColor
             buttonCell.layer.borderWidth = 0.5
+            buttonCell.layer.shadowColor = UIColor.black.cgColor
+            buttonCell.layer.shadowOpacity = 1
+            buttonCell.layer.masksToBounds = false
             return buttonCell
 
         } else {
@@ -104,6 +107,9 @@ class ProductCollectionViewController: UICollectionViewController {
             myCell.maxOfReview.text = String((showproduct.maxOfReview))
             myCell.layer.borderColor = UIColor.lightGray.cgColor
             myCell.layer.borderWidth = 0.5
+            myCell.layer.shadowColor = UIColor.black.cgColor
+            myCell.layer.shadowOpacity = 1
+            myCell.layer.masksToBounds = false
             return myCell
         }
     }
