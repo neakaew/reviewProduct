@@ -42,38 +42,36 @@ class ReviewCollectionViewController: UICollectionViewController {
             addReviews.layer.shadowColor = UIColor.black.cgColor
             addReviews.layer.shadowOpacity = 1
             addReviews.layer.masksToBounds = false
-            addReviews.frame = CGRect(x: addReviews.frame.origin.x, y: addReviews.frame.origin.y, width: 343, height: 88)
+            //addReviews.frame = CGRect(x: addReviews.frame.origin.x, y: addReviews.frame.origin.y, width: 343, height: 88)
           
         return addReviews
         } else {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
-        cell.detailReviewInCollection.text = productes?.comment[indexPath.row - 1]
-        cell.nameReviewInCollection.text = productes?.userName[indexPath.row - 1]
-        cell.date.text = productes?.dateTime[indexPath.row - 1]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
+            cell.detailReviewInCollection.text = productes?.comment[indexPath.row - 1]
+            cell.nameReviewInCollection.text = productes?.userName[indexPath.row - 1]
+            cell.date.text = productes?.dateTime[indexPath.row - 1]
         
-        let selepathIcon = productes?.rating[indexPath.row - 1]
-        if selepathIcon == 1 {
-            let emoticonLike = UIImage(named: "emoticonLike")
-            cell.imageIcon.image = emoticonLike
+            let selepathIcon = productes?.rating[indexPath.row - 1]
+            if selepathIcon == 1 {
+                let emoticonLike = UIImage(named: "emoticonLike")
+                cell.imageIcon.image = emoticonLike
             
-        } else if selepathIcon == 2 {
-           let emoticonFair = UIImage(named: "emoticonFair")
-            cell.imageIcon.image = emoticonFair
+            } else if selepathIcon == 2 {
+                let emoticonFair = UIImage(named: "emoticonFair")
+                cell.imageIcon.image = emoticonFair
             
-        } else if selepathIcon == 3 {
-            let emoticonSad = UIImage(named: "emoticonSad")
-            cell.imageIcon.image = emoticonSad
-        }
+            } else if selepathIcon == 3 {
+                let emoticonSad = UIImage(named: "emoticonSad")
+                cell.imageIcon.image = emoticonSad
+            }
         
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 1
+            cell.layer.borderColor = UIColor.lightGray.cgColor
+            cell.layer.borderWidth = 1
             
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOpacity = 1
-        cell.layer.masksToBounds = false
-        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: 343, height: 178)
-        
-            
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 1
+            cell.layer.masksToBounds = false
+            // cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: 343, height: 178)
         
         return cell
         }

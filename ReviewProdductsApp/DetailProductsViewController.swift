@@ -2,11 +2,14 @@
 import UIKit
 import os.log
 
-class DetailProductsViewController: UIViewController {
+class DetailProductsViewController: UIViewController ,UICollectionViewDelegate, UICollectionViewDataSource{
 
    
     var products: Product?
+
+    @IBOutlet var collection: UICollectionView!
     
+
     @IBOutlet weak var detialShowPhoto: UIImageView!
     @IBOutlet weak var detialNameProduct: UILabel!
     @IBOutlet weak var detailNamedetailTextView: UITextView!
@@ -28,6 +31,10 @@ class DetailProductsViewController: UIViewController {
             countOfSad.text = String((detailProducts.countRatingSad))
         
         }
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
 
@@ -64,42 +71,42 @@ class DetailProductsViewController: UIViewController {
         coutOfGood.text = String((products?.countRatingGood)!)
         countOfFair.text = String((products?.countRatingFair)!)
         countOfSad.text = String((products?.countRatingSad)!)
-
+     collection.reloadData()
     }
     
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+   
+    
+      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return  (products?.comment.count)! 
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (products?.comment.count)! + 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! ReviewCollectionViewCell
-        cell.detailOfProduct.text = products?.comment[indexPath.row - 1]
-                    cell.userNameOfReview.text = products?.userName[indexPath.row - 1]
-                    cell.dateOfReview.text = products?.dateTime[indexPath.row - 1]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reviewCollection", for: indexPath) as! DetailCollectionViewCell
+        cell.comment.text = products?.comment[indexPath.row]
+        cell.username.text = products?.userName[indexPath.row]
+        cell.date.text = products?.dateTime[indexPath.row]
         
-                    let selepathIcon = products?.rating[indexPath.row - 1]
-                    if selepathIcon == 1 {
-                        let emoticonLike = UIImage(named: "emoticonLike")
-                        cell.imageOfReview.image = emoticonLike
+        let selepathIcon = products?.rating[indexPath.row]
+            if selepathIcon == 1 {
+                let emoticonLike = UIImage(named: "emoticonLike")
+                cell.image.image = emoticonLike
         
-                    } else if selepathIcon == 2 {
-                        let emoticonFair = UIImage(named: "emoticonFair")
-                        cell.imageOfReview.image = emoticonFair
+            } else if selepathIcon == 2 {
+                let emoticonFair = UIImage(named: "emoticonFair")
+                cell.image.image = emoticonFair
         
         
-                    } else if selepathIcon == 3 {
-                        let emoticonSad = UIImage(named: "emoticonSad")
-                        cell.imageOfReview.image = emoticonSad
-                    }
+            } else if selepathIcon == 3 {
+                let emoticonSad = UIImage(named: "emoticonSad")
+                cell.image.image = emoticonSad
+            }
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.5
-        collectionView.reloadData()
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOpacity = 1
+        cell.layer.masksToBounds = false
         
         return cell
     }

@@ -240,7 +240,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="11" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCollection" id="Ooa-LG-yiy" customClass="ReviewCollectionViewCell" customModule="ReviewProdductsApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCollection" id="Ooa-LG-yiy" customClass="DetailCollectionViewCell" customModule="ReviewProdductsApp" customModuleProvider="target">
                                         <rect key="frame" x="17" y="11" width="309" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -274,17 +274,23 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="dateOfProduct" destination="Lcj-jR-2nD" id="ptw-Kf-odM"/>
-                                            <outlet property="dateOfReview" destination="Lcj-jR-2nD" id="4C8-cJ-FOE"/>
-                                            <outlet property="detailOfProduct" destination="LG9-Tl-c9h" id="kcq-1f-wDB"/>
-                                            <outlet property="imageOfProduct" destination="YCT-hW-m0i" id="lTc-DK-678"/>
-                                            <outlet property="imageOfReview" destination="YCT-hW-m0i" id="Rgu-WS-AFa"/>
-                                            <outlet property="nameOfProduct" destination="hVn-mq-kXI" id="W9c-06-WhX"/>
-                                            <outlet property="userNameOfReview" destination="hVn-mq-kXI" id="bjS-DK-AJ6"/>
+                                            <outlet property="comment" destination="LG9-Tl-c9h" id="OP2-jm-i8n"/>
+                                            <outlet property="date" destination="Lcj-jR-2nD" id="Fdk-gX-uKs"/>
+                                            <outlet property="image" destination="YCT-hW-m0i" id="iSO-Mc-PaQ"/>
+                                            <outlet property="username" destination="hVn-mq-kXI" id="9Ua-sR-wGN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="E6i-5c-vdt" id="hMy-dR-OgH"/>
+                                    <outlet property="delegate" destination="E6i-5c-vdt" id="KX0-lJ-5nm"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHW-i2-QFY">
                                 <rect key="frame" x="16" y="277" width="343" height="36"/>
@@ -340,6 +346,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collection" destination="cuW-K3-f8V" id="tTv-E3-YpR"/>
                         <outlet property="countOfFair" destination="kVZ-fd-s5X" id="eqD-l5-D0E"/>
                         <outlet property="countOfSad" destination="eUe-sO-ouE" id="8Mc-Vo-a93"/>
                         <outlet property="coutOfGood" destination="GKG-8L-jSC" id="5JY-U7-Se8"/>

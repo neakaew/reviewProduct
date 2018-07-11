@@ -21,6 +21,7 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
             nameProductTextField.text = detailProducts.productName
             nameDetailTextView.text = detailProducts.detailProduct
             namePriceTextField.text = detailProducts.price
+            //nameDetailTextView.font = UIFont(name: "Times New Roman", size: 28)
             
         }
     }

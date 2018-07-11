@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0F98AA20F63B8E00DC6029 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F98A920F63B8E00DC6029 /* DetailCollectionViewCell.swift */; };
 		4AC80F3E20E8A256004752B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC80F3D20E8A256004752B2 /* AppDelegate.swift */; };
 		4AC80F4020E8A256004752B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC80F3F20E8A256004752B2 /* ViewController.swift */; };
 		4AC80F4320E8A256004752B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC80F4120E8A256004752B2 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A0F98A920F63B8E00DC6029 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AC80F3A20E8A256004752B2 /* ReviewProdductsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewProdductsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC80F3D20E8A256004752B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC80F3F20E8A256004752B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				4AEADB0A20EA15E9004C8BDC /* AddReviewViewController.swift */,
 				4AEFE81B20EC6DBD00B4F409 /* DetailProductsViewController.swift */,
 				4AFAE1E520EF1537001A5DEB /* RatingControl.swift */,
+				4A0F98A920F63B8E00DC6029 /* DetailCollectionViewCell.swift */,
 			);
 			path = ReviewProdductsApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0F98AA20F63B8E00DC6029 /* DetailCollectionViewCell.swift in Sources */,
 				4AC80F5220E8A6E6004752B2 /* ProductCollectionViewController.swift in Sources */,
 				4AFAE1E620EF1537001A5DEB /* RatingControl.swift in Sources */,
 				4AEADB0B20EA15E9004C8BDC /* AddReviewViewController.swift in Sources */,
