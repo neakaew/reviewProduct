@@ -15,7 +15,8 @@ class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerContr
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
+
         if let detailProducts = products {
             showPhoto.image = detailProducts.photo
             nameProductTextField.text = detailProducts.productName
